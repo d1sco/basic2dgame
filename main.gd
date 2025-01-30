@@ -19,6 +19,7 @@ func new_game() -> void:
 	$HUD.update_score(score)
 	$HUD.show_message("Get Ready")
 	$Player.start($StartPosition.position)
+	get_tree().call_group("mobs","queue_free")
 	$StartTimer.start()
 	
 
